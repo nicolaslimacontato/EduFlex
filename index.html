@@ -58,12 +58,7 @@
     </nav>
     <main>
         <section id="home">
-            <div class="video-background">
-                <video autoplay muted loop>
-                    <source src="video/copy_369C0DD9-6A83-42E3-95ED-84DD5F36B431 (1).mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
-                </video>
-            </div>
+            <div class="foto-overlay"></div>
             <div class="container-fluid mt-5 pt-5">
                 <div class="row">
                     <div class="col-md-4">
@@ -87,7 +82,7 @@
                         <div class="formulariocontato card p-4 mb-5">
                             <h2 class="card-title text-center mb-4">Preencha o formulário a seguir que entraremos em
                                 contato:</h2>
-                            <form class="formulario-form">
+                            <form class="formulario-form" action="process_form.php" method="POST">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Nome</label>
                                     <input type="text" class="form-control" id="name" required>
@@ -287,13 +282,69 @@
                 <div class="about-card" data-tilt>
                     <h1>Sobre nós</h1>
                     <p>
-                        A Edu<span>Flex</span> Persianas está no mercado há mais de 20 anos e vem crescendo cada dia mais devido a
+                        A Edu<span>Flex</span> Persianas está no mercado há mais de 20 anos e vem crescendo cada dia
+                        mais devido a
                         entrega de serviços e produtos de alta qualidade. Prestamos serviços de limpeza, manutenção de
                         persianas e vendemos persianas sob medida.
                         Atendemos a região do ABCDM e cidade de São Paulo.
                     </p>
                     <a href="#" class="cta-button">Clique aqui e faça seu orçamento!<i style="margin-left: 9px;"
                             class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="contactCard card p-4 mb-5">
+                            <h2 class="card-title text-center mb-4">Preencha o formulário a seguir que entraremos em
+                                contato:</h2>
+                            <form class="contact-form" action="process_form.php" method="POST">
+                                <div class="mb-3">
+                                    <label for="contactNameInput" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="contactNameInput" name="contactName"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactEmailInput" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="contactEmailInput" name="contactEmail"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactPhoneInput" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="contactPhoneInput" name="contactPhone"
+                                        pattern="\(\d{2}\) \d{4}-\d{4}" placeholder="(00) 0000-0000" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Forma de contato preferida</label>
+                                    <div class="d-flex gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="preferredContactMethod"
+                                                id="contactWhatsappInput" value="whatsapp" required>
+                                            <label class="form-check-label" for="contactWhatsappInput">
+                                                WhatsApp
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="preferredContactMethod"
+                                                id="contactPhoneInputRadio" value="phone">
+                                            <label class="form-check-label" for="contactPhoneInputRadio">
+                                                Telefone
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="preferredContactMethod" id="contactEmailInputE" value="email">
+                                            <label class="form-check-label" for="contactEmailInputE">
+                                                E-mail
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

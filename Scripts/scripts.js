@@ -2,6 +2,8 @@ $(document).ready(function () {
     // Aplica a máscara de telefone
     $('#phone').mask('(00) 0000-0000');
 
+    $('#contactPhoneInput').mask('(00) 0000-0000');
+
     // Configuração do Parsley.js
     $('.formulario-form').parsley();
 });
