@@ -51,7 +51,7 @@ span{
 /* Ajuste o estilo da seção principal */
 #home {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,9 +117,6 @@ span{
 }
 
 @media (max-width: 768px) {
-    .formulariocontato h2 {
-        text-align: center;
-    }
 
     .service-list {
         text-align: center;
@@ -132,12 +129,7 @@ span{
     }
 
     .formulariocontato {
-        max-width: 600px;
-        /* Ajuste a largura máxima do formulário */
-        margin: 0em auto;
-        /* Centraliza o formulário horizontalmente */
-        margin-top: 2em;
-        /* Adiciona uma margem no topo para movê-lo para baixo */
+        display: none;
     }
 }
 
@@ -301,10 +293,5 @@ span{
 /* #region footer */
 .text-white{
     text-decoration: none;
-}
-
-h6 a img{
-    height: auto;
-    width: 40%;
 }
 /* #endregion */
