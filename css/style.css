@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.bi {
+    font-size: 1.5em;
+}
+
+span{
+    color: #0056b3;
+}
+
+/* Navbar personalizada */
+.navbar-custom {
+    background-color: #ffffff !important;
+    border: none;
+}
+
+/* Ajusta o tamanho e espaçamento das imagens */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+/* Centralização dos itens de navegação */
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    margin-left: auto;
+}
+
+/* Centralização da marca na navbar */
+.navbar-brand.d-lg-none,
+.navbar-brand.d-none.d-lg-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #region home */
+/* Ajuste o estilo da seção principal */
+#home {
+    position: relative;
+    min-height: 100vh;
+    /* Garante que a seção ocupe a altura total da tela */
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    color: #fffbfb;
+    padding-top: 70px;
+    /* Espaço para a navbar */
+}
+
+#home .container-fluid {
+    position: relative;
+    z-index: 1;
+    /* Garante que o conteúdo esteja sobre o vídeo */
+    padding: 20px;
+    /* Ajuste o padding conforme necessário */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.service-list {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    /* Centraliza o contêiner horizontalmente */
+    left: 0;
+    margin: 0;
+    margin-top: 2em;
+}
+
+.service-item {
+    margin-bottom: 20px;
+    /* Espaçamento entre as imagens */
+}
+
+.Eduflex img {
+    max-width: 100%;
+    height: auto;
+}
+
+.formulariocontato {
+    max-width: 600px;
+    /* Ajuste a largura máxima do formulário */
+    margin: 0em auto;
+    /* Centraliza o formulário horizontalmente */
+    margin-top: 6em;
+    /* Adiciona uma margem no topo para movê-lo para baixo */
+}
+
+.formulario-form .form-control {
+    padding: 10px;
+}
+
+.parsley-errors-list {
+    color: red;
+    font-size: 0.875em;
+}
+
+@media (max-width: 768px) {
+    .formulariocontato h2 {
+        text-align: center;
+    }
+
+    .service-list {
+        text-align: center;
+        max-width: 50%;
+    }
+
+    .Eduflex img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    .formulariocontato {
+        max-width: 600px;
+        /* Ajuste a largura máxima do formulário */
+        margin: 0em auto;
+        /* Centraliza o formulário horizontalmente */
+        margin-top: 2em;
+        /* Adiciona uma margem no topo para movê-lo para baixo */
+    }
+}
+
+/* #endregion */
+
+/* #region produtos */
+
+.swiper-container {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente com base no conteúdo */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Faz com que todos os cards se estiquem igualmente */
+}
+
+.Eduflex img {
+    max-width: 90%;
+}
+
+/* Configuração geral dos controles de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    margin: -0.75em;
+    padding: -2em;
+}
+
+.swiper-pagination{
+    margin: -0.75em;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    margin: 0 8px; /* Ajustar o espaçamento entre bullets */
+}
+
+
+#services .card {
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* Largura fixa */
+    margin: 0 15px; /* Espaçamento entre os cards */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+}
+
+#services .card-img img {
+    width: 100%;
+    height: 200px; /* Ajusta a altura da imagem */
+    object-fit: cover;
+}
+
+#services .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px; /* Adiciona padding interno */
+}
+
+#services .card-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px; /* Adiciona um espaço acima do texto */
+}
+
+#services .btn {
+    margin-top: auto; /* Garante que o botão fique no fundo do card */
+}
+
+
+/* #endregion */
+
+/* #c5c5c5 cor do fundo footer */
+
+#about {
+    height: auto;
+    background-image: url('../img/bgabout.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    background-position: center bottom; /* Centraliza a imagem de fundo */
+}
+
+.about-section {
+    padding: 40px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+    min-height: 400px; /* Define uma altura mínima para o card */
+    display: flex; /* Adiciona Flexbox */
+    flex-direction: column; /* Organiza o conteúdo em uma coluna */
+    justify-content: space-between; /* Espaça o conteúdo de forma uniforme */
+    transition: transform 0.3s ease;
+}
+
+.about-card h1 {
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    margin-bottom: 20px;
+}
+
+.about-card .cta-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about-card .cta-button:hover {
+    background-color: #218838;
+}
