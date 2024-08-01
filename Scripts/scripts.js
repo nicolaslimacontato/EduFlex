@@ -90,3 +90,12 @@ VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
     max: 25,
     speed: 400
 });
+
+$(document).ready(function() {
+    $('.popup-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true // Habilita a galeria de imagens (se necessário)
+        }
+    });
+});
