@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     function setEqualHeight() {
         // Seleciona todos os cards
@@ -85,6 +86,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajusta a altura se a janela for redimensionada
     window.addEventListener('resize', setEqualHeight);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    function setEqualHeight() {
+        // Seleciona todos os cards
+        var cards = document.querySelectorAll('#products .card');
+        var maxHeight = 0;
+
+        // Encontra a altura máxima entre todos os cards
+        cards.forEach(function(card) {
+            card.style.height = 'auto'; // Remove qualquer altura fixa
+            var height = card.offsetHeight;
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+
+        // Define todos os cards para a altura máxima
+        cards.forEach(function(card) {
+            card.style.height = maxHeight + 'px';
+        });
+    }
+
+    setEqualHeight();
+
+    // Ajusta a altura se a janela for redimensionada
+    window.addEventListener('resize', setEqualHeight);
+});
+
+VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+    max: 25,
+    speed: 400
+});
+
 
 VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
     max: 25,
