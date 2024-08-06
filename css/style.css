@@ -492,17 +492,38 @@ span {
     text-decoration: none;
 }
 
-#insta{
+.social i{
+    font-size: 30px;
+}
+
+#facebook{
     transition: .5s;
+}
+
+#facebook:hover{
+    color: #4267B2;
+    transition: .5s;
+}
+
+#whatsapp{
+    transition: .5s;
+}
+
+#whatsapp:hover {
+    color: #28a745;
+    transition: .5s;
+}
+
+#insta {
+    transition: background 0.5s, background-clip 0.5s, color 0.5s;
 }
 
 #insta:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: .5s;
+    color: transparent;
 }
+
 
 @media (max-width: 768px) {
 
