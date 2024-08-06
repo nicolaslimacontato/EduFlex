@@ -1,39 +1,52 @@
 $(document).ready(function () {
     // Aplica a máscara de telefone
-    $('#phone').mask('(00) 0000-0000');
+    $('#phone').mask('(00) 00000-0000');
 
-    $('#contactPhoneInput').mask('(00) 0000-0000');
-
-    // Configuração do Parsley.js
-    $('.formulario-form').parsley();
-});
-Parsley.addMessages('pt-br', {
-    defaultMessage: "Este valor é inválido.",
-    type: {
-        email: "Este valor não é um e-mail válido.",
-        url: "Este valor não é uma URL válida.",
-        number: "Este valor não é um número válido.",
-        integer: "Este valor deve ser um número inteiro.",
-        digits: "Este valor deve conter apenas dígitos.",
-        alphanum: "Este valor deve conter apenas caracteres alfanuméricos."
-    },
-    notblank: "Este valor não pode estar vazio.",
-    required: "Este campo é obrigatório.",
-    pattern: "Este valor é inválido.",
-    min: "Este valor deve ser maior ou igual a %s.",
-    max: "Este valor deve ser menor ou igual a %s.",
-    range: "Este valor deve estar entre %s e %s.",
-    minlength: "Este valor é muito curto. Deve ter pelo menos %s caracteres.",
-    maxlength: "Este valor é muito longo. Deve ter no máximo %s caracteres.",
-    minlength: "Este valor é muito curto. Deve ter pelo menos %s caracteres.",
-    maxlength: "Este valor é muito longo. Deve ter no máximo %s caracteres.",
-    mincheck: "Você deve selecionar pelo menos %s opções.",
-    maxcheck: "Você deve selecionar no máximo %s opções.",
-    check: "Você deve selecionar entre %s e %s opções.",
-    equalto: "Este valor deve ser idêntico."
+    $('#contactPhoneInput').mask('(00) 00000-0000');
 });
 
-Parsley.setLocale('pt-br');
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('contactNameInput').value;
+    const email = document.getElementById('contactEmailInput').value;
+    const phone = document.getElementById('contactPhoneInput').value;
+    const preferredContactMethod = document.querySelector('input[name="$PreferenciaContato"]:checked');
+
+    let isValid = true;
+
+    // Validação do Nome
+    if (!validator.isLength(name, { min: 1 })) {
+        alert('O nome é obrigatório.');
+        isValid = false;
+    }
+
+    // Validação do E-mail
+    if (!validator.isEmail(email)) {
+        alert('O e-mail é inválido.');
+        isValid = false;
+    }
+
+    // Validação do Telefone
+    const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
+    if (!phonePattern.test(phone)) {
+        alert('O telefone está no formato inválido.');
+        isValid = false;
+    }
+
+
+    // Validação da Forma de Contato Preferida
+    if (!preferredContactMethod) {
+        alert('A forma de contato preferida é obrigatória.');
+        isValid = false;
+    }
+
+    if (isValid) {
+        // Se todas as validações passarem, submeta o formulário
+        this.submit();
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper', {
@@ -114,16 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', setEqualHeight);
 });
 
-VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
-    max: 25,
-    speed: 400
-});
 
-
-VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
-    max: 25,
-    speed: 400
-});
 
 $(document).ready(function () {
     $('.popup-link').magnificPopup({

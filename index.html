@@ -102,40 +102,41 @@
                         <div class="formulariocontato card p-4 mb-5">
                             <h2 class="card-title text-center mb-4">Preencha o formulário a seguir que entraremos em
                                 contato:</h2>
-                            <form class="formulario-form" action="process_form.php" method="POST">
+                            <form class="formulario-form" action="https://api.staticforms.xyz/submit" method="POST">
+                                <input type="hidden" name="accessKey" value="7f2a54a6-145e-4cdd-b336-7e5420408255">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <input type="text" class="form-control" id="name" name="$Nome" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="phone" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone"
-                                        pattern="\(\d{2}\) \d{4}-\d{4}" placeholder="(00) 0000-0000" required>
+                                    <input type="tel" class="form-control" id="phone" name="$Telefone"
+                                        pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(00) 00000-0000" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Forma de contato preferida</label>
                                     <div class="d-flex gap-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="contactMethod"
-                                                id="contactWhatsapp" value="whatsapp" required>
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactWhatsapp" value="Whatsapp" required>
                                             <label class="form-check-label" for="contactWhatsapp">
                                                 WhatsApp
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="contactMethod"
-                                                id="contactPhone" value="phone">
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactPhone" value="Telefone">
                                             <label class="form-check-label" for="contactPhone">
                                                 Telefone
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="contactMethod"
-                                                id="contactEmail" value="email">
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactEmail" value="Email">
                                             <label class="form-check-label" for="contactEmail">
                                                 E-mail
                                             </label>
@@ -297,8 +298,7 @@
                     <div class="swiper-wrapper mt-1 mb-4">
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persiana Rolo.jpeg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
+                                <a href="img/Persiana Rolo.jpeg" class="popup-link" data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
                                         <img src="img/Persiana Rolo.jpeg" class="img-fluid" alt="Janela veneziana">
                                     </div>
@@ -315,7 +315,8 @@
                                 <a href="img/Persiana Double Vision.jpeg" class="popup-link"
                                     data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
-                                        <img src="img/Persiana Double Vision.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <img src="img/Persiana Double Vision.jpeg" class="img-fluid"
+                                            alt="Janela veneziana">
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -345,7 +346,8 @@
                                 <a href="img/Persiana Horizontal.jpeg" class="popup-link"
                                     data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
-                                        <img src="img/Persiana Horizontal.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <img src="img/Persiana Horizontal.jpeg" class="img-fluid"
+                                            alt="Janela veneziana">
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -379,10 +381,10 @@
         </section>
         <section id="about" class="about-section mt-5">
             <div class="about-content mb-5 mt-5">
-                <div class="about-card" data-tilt>
+                <div class="about-card">
                     <h1>Sobre nós</h1>
                     <p>
-                        A Edu<span>Flex</span> Persianas está no mercado há mais de 20 anos e vem crescendo cada dia
+                        A EDU<span>FLEX</span> Persianas está no mercado há mais de 20 anos e vem crescendo cada dia
                         mais devido a
                         entrega de serviços e produtos de alta qualidade. Prestamos serviços de limpeza, manutenção de
                         persianas e vendemos persianas sob medida.
@@ -395,50 +397,47 @@
             </div>
         </section>
         <section id="contact">
+            <input type="hidden" name="accessKey" value="7662ecf1-c2ca-4493-8921-0091e91571b2">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-6 mb-5">
                         <div class="contactCard card p-4 mb-5 mt-5">
                             <h2 class="card-title text-center mb-4">Faça seu cadastro que entraremos em contato.</h2>
-                            <form class="contact-form" action="process_form.php" method="POST">
+                            <form id="contactForm" action="https://api.staticforms.xyz/submit" method="POST">
+                                <input type="hidden" name="accessKey" value="7f2a54a6-145e-4cdd-b336-7e5420408255">
                                 <div class="mb-3">
                                     <label for="contactNameInput" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="contactNameInput" name="contactName"
+                                    <input type="text" class="form-control" id="contactNameInput" name="$Nome"
                                         required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="contactEmailInput" class="form-label">E-mail</label>
-                                    <input type="email" class="form-control" id="contactEmailInput" name="contactEmail"
+                                    <input type="email" class="form-control" id="contactEmailInput" name="email"
                                         required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="contactPhoneInput" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="contactPhoneInput" name="contactPhone"
-                                        pattern="\(\d{2}\) \d{4}-\d{4}" placeholder="(00) 0000-0000" required>
+                                    <input type="tel" class="form-control" id="contactPhoneInput" name="$Telefone"
+                                        pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(00) 00000-0000" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Forma de contato preferida</label>
                                     <div class="d-flex gap-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="preferredContactMethod"
-                                                id="contactWhatsappInput" value="whatsapp" required>
-                                            <label class="form-check-label" for="contactWhatsappInput">
-                                                WhatsApp
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactWhatsappInput" value="Whatsapp" required>
+                                            <label class="form-check-label" for="contactWhatsappInput">WhatsApp</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="preferredContactMethod"
-                                                id="contactPhoneInputRadio" value="phone">
-                                            <label class="form-check-label" for="contactPhoneInputRadio">
-                                                Telefone
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactPhoneInputRadio" value="Telefone">
+                                            <label class="form-check-label"
+                                                for="contactPhoneInputRadio">Telefone</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="preferredContactMethod"
-                                                id="contactEmailInputE" value="email">
-                                            <label class="form-check-label" for="contactEmailInputE">
-                                                E-mail
-                                            </label>
+                                            <input class="form-check-input" type="radio" name="$PreferenciaContato"
+                                                id="contactEmailInputE" value="Email">
+                                            <label class="form-check-label" for="contactEmailInputE">E-mail</label>
                                         </div>
                                     </div>
                                 </div>
@@ -514,13 +513,14 @@
             <!-- Section: Text -->
 
             <!-- Section: Social -->
-            <section class="text-center mb-5">
+            <section class="text-center mb-5 social">
                 <a href="https://www.facebook.com/people/Eduflex-Persianas/100082995769266/?mibextid=LQQJ4d"
                     class="text-white me-4">
                     <i class="bi bi-facebook"></i>
                 </a>
+
                 <a href="https://www.instagram.com/eduflexpersianasabc/" class="text-white me-4">
-                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram" id="insta"></i>
                 </a>
                 <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
                     class="text-white me-4">
@@ -548,6 +548,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="Scripts/scripts.js"></script>
 </body>
