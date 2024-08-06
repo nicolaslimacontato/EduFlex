@@ -135,6 +135,10 @@ span {
     .formulariocontato {
         display: none;
     }
+
+    #home{
+        background-image: url('../img/Mobilehomebackgoround.png');
+    }
 }
 
 /* Container para imagem e texto */
@@ -376,6 +380,21 @@ span {
 
 /* #endregion */
 
+/* #region mobile */
+/* Ajuste o estilo do menu fixo */
+.fixed-bottom .container {
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+
+.fixed-bottom a {
+    text-decoration: none;
+}
+
+.fixed-bottom i {
+    display: block;
+}
+
+/* #endregion */
 
 /* #region about */
 
@@ -483,6 +502,13 @@ span {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: .5s;
+}
+
+@media (max-width: 768px) {
+
+    footer{
+        margin-bottom: 76px;
+    }
 }
 
 /* #endregion */
