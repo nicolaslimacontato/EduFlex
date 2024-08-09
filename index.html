@@ -51,14 +51,24 @@
                         <a class="nav-link" href="#contact">Fale Conosco</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"
+                        <a class="nav-link d-flex align-items-center gap-2"
                             href="https://api.whatsapp.com/send?phone=551149914346&text=Ol%C3%A1,%20vim%20da%20sua%20p%C3%A1gina%20(mande%20essa%20mensagem%20sem%20apag%C3%A1-la%20para%20ser%20atendido)"
-                            target="_blank"><i style="color: green;" class="bi bi-whatsapp"></i></a>
-                    </li>
+                            target="_blank">
+                            <div class="whatsapp-content d-flex align-items-center">
+                                <i class="bi bi-whatsapp" style="color: green; font-size: 1.5rem;"></i>
+                                <h6 class="mb-0 ms-2">Tel:11 4991-4346</h6>
+                            </div>
+                        </a>
+                    </li>                    
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="whatsapp-icon">
+        <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" target="_blank">
+            <img src="img/zapzap.png" class="img-fluid" alt="">
+        </a>
+    </div>    
     <main>
         <section id="home">
             <div class="foto-overlay"></div>
@@ -100,7 +110,8 @@
                         <div class="formulariocontato card p-4 mb-5">
                             <h2 class="card-title text-center mb-4">Preencha o formulário a seguir que entraremos em
                                 contato:</h2>
-                            <form class="formulario-form" action="https://api.staticforms.xyz/submit" method="POST">
+                            <form id="homeForm" class="formulario-form" action="https://api.staticforms.xyz/submit"
+                                method="POST">
                                 <input type="hidden" name="accessKey" value="7662ecf1-c2ca-4493-8921-0091e91571b2">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Nome</label>
@@ -151,7 +162,8 @@
         <!-- Menu fixo para dispositivos móveis -->
         <div class="d-block d-md-none fixed-bottom bg-dark text-light hubzinho">
             <div class="container d-flex justify-content-around py-3">
-                <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="text-light text-center">
+                <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
+                    class="text-light text-center">
                     <i class="bi bi-whatsapp fs-1"></i>
                 </a>
                 <a href="#contact" class="text-light text-center">
@@ -161,7 +173,7 @@
                     <i class="bi bi-telephone fs-1"></i>
                 </a>
             </div>
-        </div>        
+        </div>
         <section id="services">
             <div class="container mt-5 mb-5">
                 <h1 class="text-center mb-2">Serviços</h1>
@@ -172,6 +184,9 @@
                                 <a href="img/caroselcard1.jpeg" class="image-popup">
                                     <div class="card-img">
                                         <img src="img/caroselcard1.jpeg" class="img-fluid" alt="Card 1">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -200,6 +215,9 @@
                                 <a href="img/manutencao.jpeg" class="image-popup">
                                     <div class="card-img">
                                         <img src="img/manutencao.jpeg" class="img-fluid" alt="Card 2">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -226,6 +244,9 @@
                                 <a href="img/homebackgorud.jpg" class="image-popup">
                                     <div class="card-img">
                                         <img src="img/homebackgorud.jpg" class="img-fluid" alt="Card 3">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -252,6 +273,9 @@
                                 <a href="img/Motorizacao.png" class="image-popup">
                                     <div class="card-img">
                                         <img src="img/Motorizacao.png" class="img-fluid" alt="Card 4">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -274,6 +298,9 @@
                                     <div class="card-img">
                                         <img src="img/Manutencao de janela veneziana.jpeg" class="img-fluid"
                                             alt="Card 5">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -306,13 +333,16 @@
         <section id="products">
             <div class="container mt-5 mb-5">
                 <h1 class="text-center mb-2">Produtos</h1>
-                <div class="swiper mb-3">
+                <div class="swiper swiper-products mb-3">
                     <div class="swiper-wrapper mt-1 mb-4">
                         <div class="swiper-slide">
                             <div class="card">
                                 <a href="img/Persiana Rolo.jpeg" class="popup-link" data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
                                         <img src="img/Persiana Rolo.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -329,6 +359,9 @@
                                     <div class="image-container">
                                         <img src="img/Persiana Double Vision.jpeg" class="img-fluid"
                                             alt="Janela veneziana">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -344,6 +377,9 @@
                                     data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
                                         <img src="img/Persiana Vertical.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -360,6 +396,9 @@
                                     <div class="image-container">
                                         <img src="img/Persiana Horizontal.jpeg" class="img-fluid"
                                             alt="Janela veneziana">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -375,6 +414,9 @@
                                     data-text="Texto sobre a imagem 1">
                                     <div class="image-container">
                                         <img src="img/Persianas Romana.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <div class="overlay">
+                                            <p>Clique aqui para ver as imagens</p>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="card-body">
@@ -461,15 +503,16 @@
                                     <p class="card-text">
                                         <i class="bi bi-telephone"></i> +55 (11) 4991-4346
                                     </p>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-success w-100" target="_blank">
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
+                                        class="btn btn-success w-100" target="_blank">
                                         <i class="bi bi-whatsapp"></i> Enviar Mensagem
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
-                </div>               
+                </div>
             </div>
         </section>
     </main>
@@ -477,33 +520,33 @@
         <!-- Grid container -->
         <div class="container-fluid">
             <!-- Seção de Links -->
-        <section class="footer-links d-flex flex-wrap justify-content-evenly pt-5">
-            <div class="p-2">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#home" class="text-white">Home</a>
-                </h6>
-            </div>
-            <div class="p-2">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#services" class="text-white">Serviços</a>
-                </h6>
-            </div>
-            <div class="p-2">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#products" class="text-white">Produtos</a>
-                </h6>
-            </div>
-            <div class="p-2">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#about" class="text-white">Sobre Nós</a>
-                </h6>
-            </div>
-            <div class="p-2">
-                <h6 class="text-uppercase font-weight-bold">
-                    <a href="#contact" class="text-white">Fale Conosco</a>
-                </h6>
-            </div>
-        </section>
+            <section class="footer-links d-flex flex-wrap justify-content-evenly pt-5">
+                <div class="p-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#home" class="text-white">Home</a>
+                    </h6>
+                </div>
+                <div class="p-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#services" class="text-white">Serviços</a>
+                    </h6>
+                </div>
+                <div class="p-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#products" class="text-white">Produtos</a>
+                    </h6>
+                </div>
+                <div class="p-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#about" class="text-white">Sobre Nós</a>
+                    </h6>
+                </div>
+                <div class="p-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="#contact" class="text-white">Fale Conosco</a>
+                    </h6>
+                </div>
+            </section>
             <!-- Section: Links -->
 
             <hr class="my-5" />

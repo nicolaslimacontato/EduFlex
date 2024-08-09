@@ -5,6 +5,32 @@ body {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Ajuste conforme necessário */
+    right: 20px;  /* Ajuste conforme necessário */
+    z-index: 9000; /* Garante que o ícone fique acima de outros elementos */
+}
+
+.whatsapp-icon img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    transition: .5s;
+}
+
+.whatsapp-icon img:hover{
+    transform: scale(1.4);
+    transition: .5s;
+}
+/* Ocultar o ícone em dispositivos móveis */
+@media (max-width: 767px) {
+    .whatsapp-icon {
+        display: none;
+    }
+}
+
+
 .bi {
     font-size: 1.5em;
 }
@@ -185,8 +211,6 @@ span {
     /* Torna o texto visível ao passar o mouse */
 }
 
-
-
 /* #endregion */
 
 /* #region Serviços */
@@ -273,6 +297,37 @@ span {
     /* Garante que o botão fique no fundo do card */
 }
 
+.card-img {
+    position: relative;
+    overflow: hidden; /* Garante que a sobreposição não ultrapasse os limites da imagem */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card-img:hover .overlay,
+.card-img.active .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
 
 /* #endregion */
 
@@ -376,6 +431,37 @@ span {
     height: 100%;
     object-fit: cover;
     /* Isso vai garantir que a imagem cubra o container sem distorcer */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden; /* Garante que a sobreposição não ultrapasse os limites da imagem */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-container.active .overlay {
+    opacity: 1; /* Mostra a sobreposição quando a classe active está presente */
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
 }
 
 /* #endregion */
