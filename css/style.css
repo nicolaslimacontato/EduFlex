@@ -167,49 +167,36 @@ span {
     }
 }
 
-/* Container para imagem e texto */
-.image-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.image-container img {
-    width: 100%;
-    /* Ajusta a largura da imagem */
+/* Ajuste a largura e altura das imagens do Lightbox */
+.mfp-img {
+    max-width: 100%;
     height: auto;
-    /* Mantém a proporção da imagem */
 }
 
-/* Texto que aparece quando a imagem é clicada */
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    /* Fundo preto transparente */
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    z-index: 10;
-    /* Garante que o texto fique sobre a imagem */
-    opacity: 0;
-    /* Inicialmente invisível */
-    transition: opacity 0.3s;
-    /* Transição suave para a visibilidade */
+/* Ajuste o estilo do contêiner do Lightbox */
+.mfp-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
 }
 
-/* Estilo para o popup */
-.popup-link {
-    display: block;
-    position: relative;
+/* Ajuste o tamanho do Lightbox em telas menores */
+@media (max-width: 768px) {
+    .mfp-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
 }
 
-.popup-link:hover .image-overlay {
-    opacity: 1;
-    /* Torna o texto visível ao passar o mouse */
+/* Evita que o conteúdo da página principal se desloque quando o Lightbox está aberto */
+body.mfp-active {
+    overflow: hidden;
 }
+
 
 /* #endregion */
 
@@ -435,33 +422,43 @@ span {
 
 .image-container {
     position: relative;
-    overflow: hidden; /* Garante que a sobreposição não ultrapasse os limites da imagem */
+    overflow: hidden;
 }
 
-.overlay {
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.image-container .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
-    color: white;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
 }
 
 .image-container.active .overlay {
-    opacity: 1; /* Mostra a sobreposição quando a classe active está presente */
+    opacity: 1;
 }
 
 .overlay p {
     margin: 0;
-    font-size: 16px;
-    text-align: center;
-    padding: 10px;
+    font-size: 1.2em;
 }
 
 /* #endregion */

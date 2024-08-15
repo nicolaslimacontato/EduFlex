@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+    <!-- LIghtbox -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <!-- mycss -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -59,7 +63,7 @@
                                 <h6 class="mb-0 ms-2">Tel:11 4991-4346</h6>
                             </div>
                         </a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
@@ -68,7 +72,7 @@
         <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" target="_blank">
             <img src="img/zapzap.png" class="img-fluid" alt="">
         </a>
-    </div>    
+    </div>
     <main>
         <section id="home">
             <div class="foto-overlay"></div>
@@ -76,33 +80,54 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="Eduflex d-flex flex-column mb-5">
-                            <img src="img/eduflexpersiana.png" alt="">
+                            <img src="img/eduflexpersiana.png" alt="Eduflex Persiana" class="img-fluid">
                         </div>
                         <div class="service-list mt-5">
+                            <!-- Item 1 -->
                             <div class="service-item mb-3 position-relative">
-                                <a href="img/veneziana-detalhe.jpg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
-                                    <div class="image-container">
-                                        <img src="img/veneziana.png" class="img-fluid" alt="Janela veneziana">
-                                    </div>
+                                <a href="img/veneziana-detalhe4.jfif" data-lightbox="gallery1"
+                                    data-title="Janela Veneziana">
+                                    <img src="img/veneziana.png" class="img-fluid" alt="Janela Veneziana">
                                 </a>
+                                <div class="d-none">
+                                    <a href="img/veneziana-detalhe1.jfif" data-lightbox="gallery1"
+                                        data-title="Imagem 1"></a>
+                                    <a href="img/veneziana-detalhe2.jfif" data-lightbox="gallery1"
+                                        data-title="Imagem 2"></a>
+                                    <a href="img/veneziana-detalhe3.jfif" data-lightbox="gallery1"
+                                        data-title="Imagem 3"></a>
+                                </div>
                             </div>
+                            <!-- Item 2 -->
                             <div class="service-item mb-3 position-relative">
-                                <a href="img/sobmedida-detalhe.jpg" class="popup-link"
-                                    data-text="Texto sobre a imagem 2">
-                                    <div class="image-container">
-                                        <img src="img/sobmedida.png" class="img-fluid" alt="Persiana sob medida">
-                                    </div>
+                                <a href="img/sobmedida-detalhe.jfif" data-lightbox="gallery2"
+                                    data-title="Persiana Sob Medida">
+                                    <img src="img/sobmedida.png" class="img-fluid" alt="Persiana Sob Medida">
                                 </a>
+                                <div class="d-none">
+                                    <a href="img/sobmedida-detalhe1.jfif" data-lightbox="gallery2"
+                                        data-title="Imagem 1"></a>
+                                    <a href="img/sobmedida-detalhe2.jfif" data-lightbox="gallery2"
+                                        data-title="Imagem 2"></a>
+                                    <a href="img/sobmedida-detalhe3.jfif" data-lightbox="gallery2"
+                                        data-title="Imagem 3"></a>
+                                </div>
                             </div>
+                            <!-- Item 3 -->
                             <div class="service-item mb-3 position-relative">
-                                <a href="img/manutencaocortinas-detalhe.jpg" class="popup-link"
-                                    data-text="Texto sobre a imagem 3">
-                                    <div class="image-container">
-                                        <img src="img/manutencaocortinas.png" class="img-fluid"
-                                            alt="Manutenção e limpeza de persianas e cortinas">
-                                    </div>
+                                <a href="img/manutencaocortinas-detalhe.jfif" data-lightbox="gallery3"
+                                    data-title="Manutenção e Limpeza de Persianas e Cortinas">
+                                    <img src="img/manutencaocortinas.png" class="img-fluid"
+                                        alt="Manutenção e Limpeza de Persianas e Cortinas">
                                 </a>
+                                <div class="d-none">
+                                    <a href="img/manutencaocortinas-detalhe1.jfif" data-lightbox="gallery3"
+                                        data-title="Imagem 1"></a>
+                                    <a href="img/manutencaocortinas-detalhe2.jfif" data-lightbox="gallery3"
+                                        data-title="Imagem 2"></a>
+                                    <a href="img/manutencaocortinas-detalhe3.jfif" data-lightbox="gallery3"
+                                        data-title="Imagem 3"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -337,9 +362,9 @@
                     <div class="swiper-wrapper mt-1 mb-4">
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persiana Rolo.jpeg" class="popup-link" data-text="Texto sobre a imagem 1">
+                                <a href="img/Persiana Rolo.jpeg" data-lightbox="gallery1" data-title="Texto sobre a imagem 1">
                                     <div class="image-container">
-                                        <img src="img/Persiana Rolo.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <img src="img/Persiana Rolo.jpeg" class="img-fluid" alt="Persiana Rolô">
                                         <div class="overlay">
                                             <p>Clique aqui para ver as imagens</p>
                                         </div>
@@ -347,18 +372,15 @@
                                 </a>
                                 <div class="card-body">
                                     <h4 class="card-title text-center">PERSIANAS ROLÔ</h4>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
-                                        class="btn btn-secondary">Saiba Mais</a>
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persiana Double Vision.jpeg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
+                                <a href="img/Persiana Double Vision.jpeg" data-lightbox="gallery2" data-title="Texto sobre a imagem 2">
                                     <div class="image-container">
-                                        <img src="img/Persiana Double Vision.jpeg" class="img-fluid"
-                                            alt="Janela veneziana">
+                                        <img src="img/Persiana Double Vision.jpeg" class="img-fluid" alt="Persiana Double Vision">
                                         <div class="overlay">
                                             <p>Clique aqui para ver as imagens</p>
                                         </div>
@@ -366,17 +388,15 @@
                                 </a>
                                 <div class="card-body">
                                     <h4 class="card-title text-center text-uppercase">PERSIANAS Double Vision</h4>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
-                                        class="btn btn-secondary">Saiba Mais</a>
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persiana Vertical.jpeg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
+                                <a href="img/Persiana Vertical.jpeg" data-lightbox="gallery3" data-title="Texto sobre a imagem 3">
                                     <div class="image-container">
-                                        <img src="img/Persiana Vertical.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <img src="img/Persiana Vertical.jpeg" class="img-fluid" alt="Persiana Vertical">
                                         <div class="overlay">
                                             <p>Clique aqui para ver as imagens</p>
                                         </div>
@@ -384,18 +404,15 @@
                                 </a>
                                 <div class="card-body">
                                     <h4 class="card-title text-center text-uppercase">PERSIANAS VERTICAL</h4>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
-                                        class="btn btn-secondary">Saiba Mais</a>
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persiana Horizontal.jpeg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
+                                <a href="img/Persiana Horizontal.jpeg" data-lightbox="gallery4" data-title="Texto sobre a imagem 4">
                                     <div class="image-container">
-                                        <img src="img/Persiana Horizontal.jpeg" class="img-fluid"
-                                            alt="Janela veneziana">
+                                        <img src="img/Persiana Horizontal.jpeg" class="img-fluid" alt="Persiana Horizontal">
                                         <div class="overlay">
                                             <p>Clique aqui para ver as imagens</p>
                                         </div>
@@ -403,17 +420,15 @@
                                 </a>
                                 <div class="card-body">
                                     <h4 class="card-title text-center text-uppercase">PERSIANAS SOB Horizontal</h4>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
-                                        class="btn btn-secondary">Saiba Mais</a>
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <a href="img/Persianas Romana.jpeg" class="popup-link"
-                                    data-text="Texto sobre a imagem 1">
+                                <a href="img/Persianas Romana.jpeg" data-lightbox="gallery5" data-title="Texto sobre a imagem 5">
                                     <div class="image-container">
-                                        <img src="img/Persianas Romana.jpeg" class="img-fluid" alt="Janela veneziana">
+                                        <img src="img/Persianas Romana.jpeg" class="img-fluid" alt="Persianas Romana">
                                         <div class="overlay">
                                             <p>Clique aqui para ver as imagens</p>
                                         </div>
@@ -421,8 +436,7 @@
                                 </a>
                                 <div class="card-body">
                                     <h4 class="card-title text-center text-uppercase">PERSIANAS SOB Romana</h4>
-                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0"
-                                        class="btn btn-secondary">Saiba Mais</a>
+                                    <a href="https://api.whatsapp.com/message/E3EDVLTOPW7JJ1?autoload=1&app_absent=0" class="btn btn-secondary">Saiba Mais</a>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +446,7 @@
                     <div class="swiper-button-prev" aria-label="Previous slide"></div>
                 </div>
             </div>
-        </section>
+        </section>        
         <section id="about" class="about-section mt-5">
             <div class="about-content mb-5 mt-5">
                 <div class="about-card">
@@ -600,6 +614,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
+        integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="Scripts/scripts.js"></script>
 </body>
 

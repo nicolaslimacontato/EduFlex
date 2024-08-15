@@ -158,25 +158,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
-        },
-        on: {
-            slideChange: function () {
-                var slides = document.querySelectorAll('.swiper-slide');
-                slides.forEach(function (slide) {
-                    var imageContainer = slide.querySelector('.image-container');
-                    if (imageContainer) {
-                        imageContainer.classList.remove('active'); // Remove a classe de sobreposição de todos os slides
-                    }
-                });
-
-                var activeSlide = document.querySelector('.swiper-slide-active');
-                var activeImageContainer = activeSlide.querySelector('.image-container');
-                if (activeImageContainer) {
-                    activeImageContainer.classList.add('active'); // Adiciona a classe de sobreposição ao slide ativo
-                }
-            },
-        },
-    });
+        }
+    });    
 
     // Verifica se é um dispositivo móvel
     if (window.matchMedia("(max-width: 767px)").matches) {
@@ -255,16 +238,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-$(document).ready(function () {
-    $('.popup-link').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true // Habilita a galeria de imagens (se necessário)
-        }
-    });
+//home
+$(document).ready(function() {
+    // Inicialize o Lightbox (opcional, se você precisar de configurações personalizadas)
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'disableScrolling': true, // Opcional: desabilita o rolar da página de fundo
+        'maxWidth': 1000, // Máximo de largura para o Lightbox
+        'maxHeight': 800 // Máximo de altura para o Lightbox
+    });    
 });
-
 
 $(document).ready(function () {
     $('.image-popup').magnificPopup({
