@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 30,
             },
         }
-    });    
+    });
 
     // Verifica se é um dispositivo móvel
     if (window.matchMedia("(max-width: 767px)").matches) {
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //home
-$(document).ready(function() {
+$(document).ready(function () {
     // Inicialize o Lightbox (opcional, se você precisar de configurações personalizadas)
     lightbox.option({
         'resizeDuration': 200,
@@ -247,7 +247,7 @@ $(document).ready(function() {
         'disableScrolling': true, // Opcional: desabilita o rolar da página de fundo
         'maxWidth': 1000, // Máximo de largura para o Lightbox
         'maxHeight': 800 // Máximo de altura para o Lightbox
-    });    
+    });
 });
 
 $(document).ready(function () {
@@ -258,3 +258,15 @@ $(document).ready(function () {
         }
     });
 });
+
+function openWhatsApp() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+        window.location.href = "https://wa.me/551149914346";
+        setTimeout(function () {
+            window.location.href = "https://web.whatsapp.com/send?phone=551149914346&text=Olá";
+        }, 300);
+    } else {
+        window.open("https://web.whatsapp.com/send?phone=551149914346&text=Olá", "_blank");
+    }
+}
