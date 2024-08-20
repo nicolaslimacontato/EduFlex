@@ -66,11 +66,34 @@ span {
 }
 
 /* Centralização da marca na navbar */
-.navbar-brand.d-lg-none,
-.navbar-brand.d-none.d-lg-block {
+.navbar-brand {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .whatsapp-content h6 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-brand .whatsapp-content {
+        display: none;
+    }
+}
+
+/* Esconde o texto do telefone em telas muito pequenas */
+@media (max-width: 374.98px) {
+    .whatsapp-content h6 {
+        display: none !important;
+    }
 }
 
 /* #region home */

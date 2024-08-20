@@ -30,18 +30,21 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand d-lg-none" href="#">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
                 <img src="img/logo.png" alt="logo" class="img-fluid">
+                <div class="whatsapp-content d-flex align-items-center d-lg-none ms-2 justify-content-center text-center">
+                    <i class="bi bi-whatsapp" style="color: green; font-size: 1.5rem;"></i>
+                    <h6 class="mb-0 ms-2">Tel: 11 4991-4346</h6>
+                </div>
             </a>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav mx-auto text-center d-flex align-items-center">
-                    <a class="navbar-brand d-none d-lg-block mx-auto" href="#home">
-                        <img src="img/logo.png" alt="logo" class="img-fluid">
-                    </a>
+                <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Serviços</a>
                     </li>
@@ -54,20 +57,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Fale Conosco</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a class="nav-link d-flex align-items-center gap-2"
                             href="https://wa.me/551149914346"
                             target="_blank">
                             <div class="whatsapp-content d-flex align-items-center">
                                 <i class="bi bi-whatsapp" style="color: green; font-size: 1.5rem;"></i>
-                                <h6 class="mb-0 ms-2">Tel:11 4991-4346</h6>
+                                <h6 class="mb-0 ms-2">Tel: 11 4991-4346</h6>
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>    
     <div class="whatsapp-icon">
         <a href="https://wa.me/551149914346" target="_blank">
             <img src="img/zapzap.png" class="img-fluid" alt="">
